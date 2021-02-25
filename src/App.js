@@ -1,16 +1,26 @@
 
 import './App.css';
+import Feed from './feed/Feed';
 import  {Header}  from './header/Header';
+import Login from './login/Login';
 import { Sidebar } from './sidebar/Sidebar';
 
 function App() {
+  const user = null;
   return (
     <div className="App">
-    
-      <Header />
-      <div className="app__body">
-        <Sidebar/>
-      </div>
+      {!user ? (
+        <Login />
+      ) : (
+        <>
+          <Header />
+          <div className="app__body">
+            <Sidebar />
+
+            <Feed />
+          </div>
+        </>
+      )}
     </div>
   );
 }
