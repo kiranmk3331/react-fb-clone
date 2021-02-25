@@ -1,5 +1,5 @@
 import { Avatar } from "@material-ui/core";
-import {ExpandMoreOutlined} from "@material-ui/icons";
+import { ExpandMoreOutlined } from "@material-ui/icons";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import NearMeIcon from "@material-ui/icons/NearMe";
@@ -15,7 +15,7 @@ function Post({ profilePic, image, userName, timestamp, message }) {
         <Avatar src={profilePic} className="post__avatar" />
         <div className="post__topInfo">
           <h3>{userName}</h3>
-          <p>timestamp</p>
+          <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
         </div>
       </div>
       <div className="post__bottom">

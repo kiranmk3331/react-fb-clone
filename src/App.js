@@ -4,9 +4,10 @@ import Feed from './feed/Feed';
 import  {Header}  from './header/Header';
 import Login from './login/Login';
 import { Sidebar } from './sidebar/Sidebar';
+import { useStateValue } from './StateProvider';
 
 function App() {
-  const user = null;
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="App">
       {!user ? (
