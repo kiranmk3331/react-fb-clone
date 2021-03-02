@@ -12,7 +12,7 @@ import { useStateValue } from "../StateProvider";
 
 export const Sidebar = () => {
 
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }] = useStateValue();
   return (
     <div className="sidebar">
       <SidebarRow
